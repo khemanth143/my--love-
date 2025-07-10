@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HAPPY BIRTHDAY babe😘</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background-image: url('babe.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px 20px 20px;
+      animation: fadeIn 2s ease-in;
+      overflow: hidden;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px white; }
+      50% { box-shadow: 0 0 20px #ff99cc; }
+      100% { box-shadow: 0 0 5px white; }
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    @keyframes birthdayText {
+      0% { transform: scale(1); color: #ff99cc; text-shadow: 0 0 10px #fff; }
+      50% { transform: scale(1.2); color: #ffffff; text-shadow: 0 0 20px #ff69b4; }
+      100% { transform: scale(1); color: #ff99cc; text-shadow: 0 0 10px #fff; }
+    }
+
+    .birthday-message {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      animation: birthdayText 2s infinite;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #ffccff;
+      animation: bounce 2s infinite;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #ff99cc;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 20px auto;
+      max-width: 90%;
+      line-height: 1.6;
+    }
+
+    img {
+      border-radius: 20px;
+      margin-top: 30px;
+      width: 90%;
+      max-width: 300px;
+      height: auto;
+      animation: glow 2s infinite;
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 20px;
+      color: pink;
+      animation: fall 5s linear infinite;
+      pointer-events: none;
+    }
+
+    .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 20%; animation-delay: 1s; }
+    .heart:nth-child(3) { left: 30%; animation-delay: 2s; }
+    .heart:nth-child(4) { left: 40%; animation-delay: 3s; }
+    .heart:nth-child(5) { left: 50%; animation-delay: 4s; }
+    .heart:nth-child(6) { left: 60%; animation-delay: 2.5s; }
+    .heart:nth-child(7) { left: 70%; animation-delay: 1.5s; }
+    .heart:nth-child(8) { left: 80%; animation-delay: 0.5s; }
+    .heart:nth-child(9) { left: 90%; animation-delay: 3.5s; }
+    .heart:nth-child(10) { left: 95%; animation-delay: 2.2s; }
+
+    #musicControl {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #ff69b4;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #fff;
+      z-index: 1000;
+    }
+
+    #musicControl:hover {
+      background-color: #ff85c1;
+    }
+
+    /* 📱 Mobile Adjustments */
+    @media (max-width: 500px) {
+      .birthday-message {
+        font-size: 32px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      #musicControl {
+        font-size: 14px;
+        padding: 8px 16px;
+        top: 15px;
+        right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎵 Audio -->
+  <audio id="birthdayMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- 🎛️ Music Control Button -->
+  <button id="musicControl">▶️ Play Music</button>
+
+  <!-- 💖 Falling Hearts -->
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+  <div class="heart">💖</div>
+
+  
+
+  <!-- Image -->
+  <img src="babe.jpg" alt="my photo">
+
+  <!-- 🎯 Script -->
+  <script>
+    const music = document.getElementById("birthdayMusic");
+    const button = document.getElementById("musicControl");
+    let isPlaying = false;
+
+    button.addEventListener("click", function () {
+      if (isPlaying) {
+        music.pause();
+        button.textContent = "▶️ Play Music";
+      } else {
+        music.play();
+        button.textContent = "⏸️ Pause Music";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
+</body>
+</html>
