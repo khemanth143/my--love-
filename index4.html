@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday My Love 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      overflow-x: hidden;
+    }
+
+    .page {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .active {
+      display: flex;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background: #d81b60;
+    }
+
+    .heart {
+      position: absolute;
+      animation: float 6s infinite ease-in-out;
+      font-size: 24px;
+      color: #ff69b4;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+
+    .corner-paragraph {
+      max-width: 90%;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      font-size: 1rem;
+      color: #333;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    img, video {
+      max-width: 90%;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f48fb1;
+    }
+
+    .quote-modal {
+      background-color: rgba(255, 255, 255, 0.85);
+      color: #e91e63;
+      font-size: 1.2rem;
+      padding: 12px 20px;
+      border-radius: 10px;
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, 10px);
+      }
+      to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+ #page3 {
+  background-image: url('b1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 10px 10px 40px;
+  overflow: hidden;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Page 1 -->
+  <div id="page1" class="page active">
+    <h1 style="color:#fff;">💝 Happy Birthday Babe 💝</h1>
+    <p>Ready for your first surprise?</p>
+    <button onclick="toPage2()">🎁 Next Surprise</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div id="page2" class="page">
+    <h1 style="color:#fff;">🌸 Memories & Magic 🌸</h1>
+    <img src="b2.jpg" width="250" />
+    <p>Swipe through and smile 😊</p>
+    <video width="250" autoplay muted loop>
+      <source src="v2.mp4" type="video/mp4" />
+    </video>
+    <img src="b6.jpg" width="250" />
+    <p>😘See The Effect through the love ❤️</p>
+     <img src="b0.jpg" width="250" />
+    <button id="nextToPage3">🎊 Final Surprise</button>
+  </div>
+
+  <!-- Page 3 -->
+  <div id="page3" class="page">
+    <h1 style="color:#e91e63;">🎂 Happy Birthday 🎂</h1>
+    <button id="musicControl">▶️ Play Music</button>
+
+    <!-- Floating Hearts -->
+    <div class="heart">💖</div><div class="heart">💖</div><div class="heart">💖</div>
+    <div class="heart">💖</div><div class="heart">💖</div><div class="heart">💖</div>
+    <div class="heart">💖</div><div class="heart">💖</div><div class="heart">💖</div>
+    <div class="heart">💖</div>
+
+    <!-- Love Letter -->
+    <div class="corner-paragraph">
+      <p>
+        🎂❤️ I don't know about you but...<br>
+        niku chala vundocchu ela vundali alaa vundali anii but<br>
+        manam elanee yeppatikii vuntam anukuntunna<br>
+        nuvvu nagurinchii em feel avuthunnavoo naku theliyadhu but<br>
+        eppatikee chalaa sarlu cheppa but malla chebuthunna<br>
+        💖 I love you deeply and truly 💖<br>
+        and once again happy birthday 🎂💕
+      </p>
+    </div>
+
+    <img src="b8.jpg" alt="babe" width="250"/>
+    <video width="450" controls autoplay muted loop>
+      <source src="v1.mp4" type="video/mp4" />
+    </video>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+      <img src="b1.jpg" width="200" />
+      <img src="b4.jpg" width="200" />
+      <img src="b3.jpg" width="200" />
+      <img src="b7.jpg" width="200" />
+      <img src="b5.jpg" width="200" />
+    </div>
+
+    <div id="quoteModal" class="quote-modal" style="display: none;"></div>
+  </div>
+
+  <!-- Birthday Music -->
+  <audio id="birthdayMusic" loop>
+    <source src="song.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function toPage2() {
+      document.getElementById("page1").classList.remove("active");
+      document.getElementById("page2").classList.add("active");
+    }
+
+    document.getElementById("nextToPage3").onclick = () => {
+      document.getElementById("page2").classList.remove("active");
+      document.getElementById("page3").classList.add("active");
+    };
+
+    // Music control
+    const music = document.getElementById("birthdayMusic");
+    const musicBtn = document.getElementById("musicControl");
+    let isPlaying = false;
+    musicBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        music.pause();
+        musicBtn.textContent = "▶️ Play Music";
+      } else {
+        music.play();
+        musicBtn.textContent = "⏸️ Pause Music";
+      }
+      isPlaying = !isPlaying;
+    });
+
+    // Quote rotation
+    const quotes = [
+      "❤️ You are my today and all of my tomorrows.",
+      "💘 I see the rest of my life when I look at you.",
+      "🌹 You’re the smile I never want to lose.",
+      "💕 You loved me when I couldn’t love myself.",
+      "💖 Forever is not long enough with you."
+    ];
+    let currentQuote = 0;
+    const modal = document.getElementById("quoteModal");
+
+    function showQuote() {
+      modal.textContent = quotes[currentQuote];
+      modal.style.display = "block";
+      modal.classList.remove("fadeIn");
+      void modal.offsetWidth;
+      modal.classList.add("fadeIn");
+      currentQuote = (currentQuote + 1) % quotes.length;
+    }
+
+    setTimeout(() => {
+      showQuote();
+      setInterval(showQuote, 6000);
+    }, 2000);
+
+    // Randomize heart positions
+    const hearts = document.querySelectorAll('.heart');
+    hearts.forEach(h => {
+      h.style.left = Math.random() * 100 + "vw";
+      h.style.top = Math.random() * 100 + "vh";
+      h.style.animationDuration = (4 + Math.random() * 4) + "s";
+    });
+  </script>
+</body>
+</html>
